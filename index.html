@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Team Task Manager</h1>
+
+    <section>
+        <h2>Dashboard</h2>
+        <p>Total Tasks: <span id="totalTasks">0</span></p>
+        <p>Pending Tasks: <span id="pendingTasks">0</span></p>
+        <p>Completed Tasks: <span id="completedTasks">0</span></p>
+    </section>
+
+    <section>
+        <h2>Add Task</h2>
+
+        <form id="taskForm">
+            <input type="text" id="title" placeholder="Task title" required>
+            <input type="text" id="assigned" placeholder="Assigned member" required>
+
+            <textarea id="description" placeholder="Description"></textarea>
+
+            <select id="priority">
+                <option value="Low">Low</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <input type="date" id="date">
+
+            <button type="submit">Add Task</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Tasks</h2>
+
+        <input type="text" id="searchText" placeholder="Search tasks">
+
+        <select id="statusFilter">
+            <option value="">All Tasks</option>
+            <option value="Pending">Pending</option>
+            <option value="Completed">Completed</option>
+        </select>
+
+        <div id="task_list"></div>
+    </section>
+
+    <script type="module" src="app.js"></script>
+
+</body>
+</html>
